@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://cxhndywdh0uxh"]
+[gd_scene load_steps=3 format=3 uid="uid://cxhndywdh0uxh"]
 
-[node name="GamePiece" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://ddb7yemtrumjr" path="res://assets/square_nodetailsOutline.png" id="1_0pnuq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks7mj"]
+size = Vector2(135, 134)
+
+[node name="GamePiece" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0pnuq")
+region_enabled = true
+region_rect = Rect2(0, 0, 135, 135)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ks7mj")
